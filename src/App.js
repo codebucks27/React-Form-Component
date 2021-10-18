@@ -1,50 +1,41 @@
-import './App.css'
-import useForm from './Hooks/useForm'
+import './App.css';
+import useForm from './Hooks/useForm';
 
 function App() {
+
+  //Final submit function
   const formLogin = () => {
-    //call back function
-    console.log(
-      'This is Callback function which is called after form submission!'
-    )
-    console.log('Form Values: ')
-    console.log(values)
+
+    console.log("Callback function when form is submitted!");
+    console.log("Form Values ", values);
   }
-  const { values, handleChange, handleSubmit, errors } = useForm(formLogin)
+
+  //Custom hook call
+  const {handleChange, values,errors,handleSubmit} = useForm(formLogin);
+
 
   return (
-    <div className='App'>
+    <div className="App">
       <form onSubmit={handleSubmit}>
-        <input
-          type='email'
-          name='email'
-          placeholder='E-mail'
-          onChange={handleChange}
-        />
-        {errors.email && <h3>{errors.email}</h3>}
-        <input
-          type='password'
-          name='password'
-          placeholder='Password'
-          onChange={handleChange}
-          minLength='8'
-        />
+      <input type="email" name="email" placeholder="E-mail"  onChange={handleChange}   />
+      {
+        errors.email && <h3>{errors.email}</h3>
+      }
+      <input minLength='8' type="password" name="password" placeholder="password"  onChange={handleChange}   />
+      {
+        errors.password && <h3>{errors.password}</h3>
 
-        {errors.password && <h3>{errors.password}</h3>}
-        <input
-          type='text'
-          name='username'
-          placeholder='Username'
-          onChange={handleChange}
-          required
-          minLength='5'
-        />
-        {errors.username && <h3>{errors.username}</h3>}
+      }
+      <input type="text" minLength='5' required name="username" placeholder="username"  onChange={handleChange}   />
+      {
+        errors.username && <h3>{errors.username}</h3>
 
-        <input type='submit' value='Submit' className='submit' />
+      }
+      <input type="submit" value="Submit" className="submit"  />
       </form>
+
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

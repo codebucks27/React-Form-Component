@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  margin-top:20vh;
+  margin-top: 20vh;
 }
 
 form{
@@ -11,19 +11,20 @@ form{
 }
 
 input{
-  margin:0.5rem 0;
-  padding:1rem;
-  outline:none;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  outline: none;
 }
 
 input:invalid:not(:placeholder-shown){
-  border:1px solid red;
+  border: 2px solid red;
 }
+
 input:valid:not(:placeholder-shown){
-  border:1px solid green;
+  border: 2px solid green;
 }
 
 .submit{
-    border:1px solid #000 !important;
-    cursor: pointer;
+  border: 2px solid #000 !important;
+  cursor: pointer;
 }
