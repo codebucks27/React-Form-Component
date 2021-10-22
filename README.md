@@ -1,4 +1,11 @@
-# Getting Started with Create React App
+# How to implement Form Handling and Validation in ReactJS by creating Custom Hook😇
+
+This repository contains code of reusable form component for ReactJS.
+
+If you want to learn how to create it please follow below tutorial: <br />
+
+https://youtu.be/_ePL_Hu_cW4
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
